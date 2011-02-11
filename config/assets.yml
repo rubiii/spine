@@ -2,15 +2,22 @@ template_function: _.template
 
 javascripts:
   app:
+    # vendor libraries
     - public/javascripts/vendor/jquery-1.5.min.js
     - public/javascripts/vendor/underscore-1.1.4.min.js
     - public/javascripts/vendor/backbone-0.3.3.min.js
-    - public/javascripts/vendor/backbone.rails.js
-    - public/javascripts/rails.js
-    - public/javascripts/application.js
     - public/javascripts/vendor/jquery.dotimeout.js
+    # make backbone.js play nicely with default rails setup
+    # https://gist.github.com/719080
+    - public/javascripts/vendor/backbone.rails.js
+    # http://rubygems.org/gems/jquery-rails
+    - public/javascripts/rails.js
+    # custom scripts
+    - public/javascripts/application.js
+    # backbone.js objects
     - public/javascripts/models/**/*.js
     - public/javascripts/collections/**/*.js
     - public/javascripts/controllers/**/*.js
     - public/javascripts/views/**/*.js
+    # underscore.js files
     - app/views/**/*.jst
